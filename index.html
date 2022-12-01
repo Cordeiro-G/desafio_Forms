@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Staatliches&display=swap" rel="stylesheet">
+    <title>Forms</title>
+</head>
+<body>
+    <header>
+        <section><h1>MENTORIA</h1>
+            <p>Preencha o formulário abaixo para agendar a sua mentoria</p></section>
+       <button><img src="./assets/star.svg" title="avalie o seu mentor" onclick="mudarFormulario()" alt="button switch"></button>
+    </header>
+    <div class="app"> 
+       
+        <form id="form">
+            
+            <fieldset>
+                <div class="fieldset-wrapper">
+                    <legend>INFORMAÇÕES PESSOAIS</legend>
+                  <div class="container">
+                    <div class="input-completeName">
+                        <label for="nameInfo"> Nome </label>
+                        <input title="name" required minlength="1" maxlength="100" pattern="\d" placeholder="informe seu nome" type="text" id="infoName"/>
+                    </div>
+                    <div class="input-completeName ">
+                        <label for="infoLastName"> Sobrenome</label>
+                        <input title="lasName" required placeholder=" informe o seu sobrenome" type="text" id="infoLastName"/>
+                    </div>
+                  </div>
+                 
+                    <div class="input-wrapper">
+                        <label for="infoEmail"> Email <span>(digite um email válido)</span></label>
+                        <input  type="email" required id="infoEmail"/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="infoPassword"> Senha</label>
+                        <input title="infoPassword" required min="6" max="70" placeholder="senha" type="password" id="infoPassword"/>
+                    </div>
+                </div>
+            </fieldset>
+                <fieldset>
+                    <legend>NOME DO MENTOR</legend>
+                    <div class="input-wrapper">
+                        <label for=""> Nome do seu mentor <span>(apenas o primeiro nome)</span></label>
+                        <input title="mentorName" required placeholder="nome do mentor" type="text" id="mentorName"/>
+                    </div>
+                </fieldset>
+                
+               
+          
+            <fieldset>
+                <div class="fieldset-wrapper">
+                    <legend>SEUS HORARIOS DISPONÍVEIS</legend>
+                    <div class="col-3">
+                        <div class="input-wrapper"><label for="event-date">Data <span>(dd/mm/aa)</span></label><input type="date" required></div>
+                        <div class="input-wrapper"><label for="event-begin">Das</label><input type="time" required></div>
+                        <div class="input-wrapper"><label for="event-end">Até</label><input type="time" required></div>
+                    </div>  <div class="col-3">
+                        <div class="input-wrapper"><label for="event-date">Data <span>(dd/mm/aa)</span></label><input type="date" required></div>
+                        <div class="input-wrapper"><label for="event-begin">Das</label><input type="time" required></div>
+                        <div class="input-wrapper"><label for="event-end">Até</label><input type="time" required></div>
+                    </div>
+            </fieldset>
+            
+        </form>
+
+      
+        <footer>
+            <input class="button" form="form" type="submit" value="SALVAR">
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
+
+
